@@ -1,16 +1,53 @@
-# flutter_truco
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-A new Flutter project.
+# Flutter Dumb Game (Network)
 
-## Getting Started
+The flutter game with connection in network (localhost and intranet)
 
-This project is a starting point for a Flutter application.
+## Rodando localmente
 
-A few resources to get you started if this is your first Flutter project:
+Clone o projeto
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```bash
+  git clone https://github.com/ayusuke7/FlutterDumb
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  cd FlutterDumb
+
+  flutter pub get
+
+  flutter run
+```
+
+Obs: Don't work with Web
+
+## Usage
+
+The Game use connection Server/Client in localhost or intranet.
+
+It is possible to choose between Table and Player when starting the game.
+
+The game needs you to start the server on some device. The server will wait for the others to connect up to a total of 4 devices.
+
+### Table Mode
+
+Initialize GameTruco with instance of Player() can that is "auto" or "host" specification address of the player.;
+
+### Player Mode
+
+Initialize PlayerTruco with instance of CreatePlayerModel()
+specification address of the player.;
+
+Example:
+
+```dart
+PlayerTruco(
+  model: CreatePlayerModel(
+    host: '192.168.1.10',
+    name: 'Rick'
+  ),
+)
+```
+
+## Autores
+
+- [@ayusuke7](https://github.com/ayusuke7)
